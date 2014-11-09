@@ -1,0 +1,32 @@
+Tom Smith
+Project 2
+2D Game Design
+
+There is one Python file that contains the whole program call main.py.
+
+When starting the game there will be an image of a cheese wheel in the center of the screen.
+Images of rats will appear and start to move towards the cheese. There is a score counter in the
+lower right of the window. Use the mouse to click on each rat before they reach the cheese.
+The rats steadily accelerate over time. A game over message will appear when a rat reaches the cheese.
+
+
+
+This game was created with the use of three different widgets. The root widget, base widget and attacker
+widgets. The base is represented by the cheese wheel at the center of the screen and the attackers are
+rats. The rats are generated on the four edges of the window at random locations.
+
+I used the vector class to calculate the attackers direction of travel. When an attacker is clicked its
+'state' variable is changed which triggers its death animation next time the update method is called.
+After the death animation is played the attacker is removed from the game.
+
+All the attackers are kept in a list which is iterated over each time each time collisions and animation
+frames are checked.
+
+When a collision between the base and attacker is detected the 'play' variable is set to 'False' and
+ all movement and animations are stopped and the game over message is displayed.
+
+
+
+I pulled code from my first project to the direction the attackers should move. The animation code was
+taken from the in class example. The Rat images where taken from Reiner's Tilesets and the Cheese wheel
+is from openclipart.org (https://openclipart.org/detail/23487/tango-style-cheese-wheel-by-rugby471)
